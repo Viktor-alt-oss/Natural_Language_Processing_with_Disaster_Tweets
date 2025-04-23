@@ -1,10 +1,29 @@
 # Natural Language Processing with Disaster Tweets
 
-## 📌 Overview
-Проект посвящен созданию модели машинного обучения, которая классифицирует твиты на те, что сообщают о реальных катастрофах, и те, что не относятся к ним. Это соревнование от Kaggle идеально подходит для изучения основ NLP (Natural Language Processing).
+Disaster Tweet Classification Project
+Project Banner Replace with actual banner image
 
-**Задача**: Предсказать по тексту твита (`1` = реальная катастрофа, `0` = нет).  
-**Метрика оценки**: F1-score (учитывает precision и recall).
+📌 Project Overview
+This project tackles Kaggle's "Natural Language Processing with Disaster Tweets" competition, developing a machine learning model to classify whether tweets are about real disasters (1) or not (0). The solution achieved 0.80171 F1-score on the competition's test set.
+
+Key Features:
+
+Text preprocessing pipeline for noisy tweet data
+
+Comparative analysis of multiple ML algorithms
+
+Optimized SVM classifier with TF-IDF vectorization
+
+Ready-to-use prediction pipeline
+
+🏆 Performance Summary
+Metric	Score
+Competition F1-Score	0.80171
+Test Accuracy	80.3%
+Precision	0.80
+Recall	0.71
+🛠 Technical Implementation
+Model Architecture
 
 ---
 ## 🚀 Описание проекта
