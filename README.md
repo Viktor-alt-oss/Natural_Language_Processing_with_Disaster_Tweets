@@ -1,7 +1,7 @@
 # Disaster Tweet Classification Project
 Project Banner Replace with actual banner image
 
-##📌 Project Overview
+## 📌 Project Overview
 This project tackles Kaggle's "Natural Language Processing with Disaster Tweets" competition, developing a machine learning model to classify whether tweets are about real disasters (1) or not (0). The solution achieved 0.80171 F1-score on the competition's test set.
 
 ## Key Features:
@@ -22,6 +22,8 @@ Precision	0.80
 Recall	0.71
 🛠 Technical Implementation
 Model Architecture
+
+![deepseek_mermaid_20250423_910ccd](https://github.com/user-attachments/assets/bcc28500-bd8d-41c1-8df9-3d1a8f53effb)
 
 graph LR
     A[Raw Tweet] --> B[Text Extraction]
