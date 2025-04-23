@@ -1,7 +1,5 @@
 # 🚨 Disaster Tweet Classification Project
 
-![Project Banner](images/banner.png)
-
 ## 📌 Project Overview
 
 **Competition**: [Kaggle NLP - Disaster Tweets](https://www.kaggle.com/c/nlp-getting-started)  
