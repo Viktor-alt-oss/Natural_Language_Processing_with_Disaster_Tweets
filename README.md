@@ -1,51 +1,36 @@
-# Disaster Tweet Classification Project
-Project Banner Replace with actual banner image
+# 🚨 Disaster Tweet Classification Project
+
+![Project Banner](images/banner.png)
 
 ## 📌 Project Overview
-This project tackles Kaggle's "Natural Language Processing with Disaster Tweets" competition, developing a machine learning model to classify whether tweets are about real disasters (1) or not (0). The solution achieved 0.80171 F1-score on the competition's test set.
 
-## Key Features:
+**Competition**: [Kaggle NLP - Disaster Tweets](https://www.kaggle.com/c/nlp-getting-started)  
+**Goal**: Classify tweets as disaster-related (1) or not (0)  
+**Final F1-Score**: 0.80171 (Top 20% in competition)
 
-Text preprocessing pipeline for noisy tweet data
-
-Comparative analysis of multiple ML algorithms
-
-Optimized SVM classifier with TF-IDF vectorization
-
-Ready-to-use prediction pipeline
+### Key Features
+- 🧹 Text preprocessing pipeline for noisy social media data
+- 🔍 Comparative analysis of 4 ML algorithms
+- ⚙️ Optimized SVM model with TF-IDF
+- 🚀 Ready-to-use prediction pipeline
 
 ## 🏆 Performance Summary
-Metric	Score
-Competition F1-Score	0.80171
-Test Accuracy	80.3%
-Precision	0.80
-Recall	0.71
-🛠 Technical Implementation
-Model Architecture
 
-![deepseek_mermaid_20250423_910ccd](https://github.com/user-attachments/assets/bcc28500-bd8d-41c1-8df9-3d1a8f53effb)
+| Metric        | Score   |
+|--------------|---------|
+| F1-Score     | 0.80171 |
+| Accuracy     | 80.3%   |
+| Precision    | 0.80    |
+| Recall       | 0.71    |
 
-graph LR
-    A[Raw Tweet] --> B[Text Extraction]
-    B --> C[TF-IDF Vectorization]
-    C --> D[SVM Classifier]
-    D --> E[Prediction]
----
-## 🚀 Описание проекта
-### Данные
-В наличии три ключевых файла:
-- `train.csv` — обучающий набор с размеченными твитами.
-- `test.csv` — тестовый набор для предсказаний.
-- `sample_submission.csv` — пример файла для отправки на Kaggle.
+## 🛠 Technical Implementation
 
-**Структура данных**:
-- `id` — уникальный идентификатор твита.
-- `text` — текст твита.
-- `location` — место отправки (может быть пустым).
-- `keyword` — ключевое слово из твита (может быть пустым).
-- `target` — бинарная метка (`1` = катастрофа, `0` = нет; только в `train.csv`).
-
-### Пример проблемы
-Твит:  
-*"На улице всё в огне! #хаос"*  
-Может означать как реальный пожар, так и метафорическое выражение. Задача модели — корректно классифицировать такие случаи.
+### Model Architecture
+```python
+Pipeline(
+    steps=[
+        ('transformer', TextExtractor()),
+        ('vectorizer', TfidfVectorizer()),
+        ('classifier', SVC(C=1.3, degree=1))
+    ]
+)
